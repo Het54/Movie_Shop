@@ -1,0 +1,17 @@
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/bin/Debug/net9.0/MovieShopMVC.Infrastructure.deps.json
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/bin/Debug/net9.0/MovieShopMVC.Infrastructure.runtimeconfig.json
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/bin/Debug/net9.0/MovieShopMVC.Infrastructure.dll
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/bin/Debug/net9.0/MovieShopMVC.Infrastructure.pdb
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/bin/Debug/net9.0/MovieShopMVC.Core.dll
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/bin/Debug/net9.0/MovieShopMVC.Core.pdb
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/MovieShopMVC.Infrastructure.csproj.AssemblyReference.cache
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/MovieShopMVC.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/MovieShopMVC.Infrastructure.AssemblyInfoInputs.cache
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/MovieShopMVC.Infrastructure.AssemblyInfo.cs
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/MovieShopMVC.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/MovieSho.F3AF6F64.Up2Date
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/MovieShopMVC.Infrastructure.dll
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/refint/MovieShopMVC.Infrastructure.dll
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/MovieShopMVC.Infrastructure.pdb
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/MovieShopMVC.Infrastructure.genruntimeconfig.cache
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/Debug/net9.0/ref/MovieShopMVC.Infrastructure.dll

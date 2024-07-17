@@ -1,0 +1,14 @@
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/bin/Debug/net9.0/MovieShopMVC.Core.deps.json
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/bin/Debug/net9.0/MovieShopMVC.Core.runtimeconfig.json
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/bin/Debug/net9.0/MovieShopMVC.Core.dll
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/bin/Debug/net9.0/MovieShopMVC.Core.pdb
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/Debug/net9.0/MovieShopMVC.Core.csproj.AssemblyReference.cache
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/Debug/net9.0/MovieShopMVC.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/Debug/net9.0/MovieShopMVC.Core.AssemblyInfoInputs.cache
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/Debug/net9.0/MovieShopMVC.Core.AssemblyInfo.cs
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/Debug/net9.0/MovieShopMVC.Core.csproj.CoreCompileInputs.cache
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/Debug/net9.0/MovieShopMVC.Core.dll
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/Debug/net9.0/refint/MovieShopMVC.Core.dll
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/Debug/net9.0/MovieShopMVC.Core.pdb
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/Debug/net9.0/MovieShopMVC.Core.genruntimeconfig.cache
+/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/Debug/net9.0/ref/MovieShopMVC.Core.dll

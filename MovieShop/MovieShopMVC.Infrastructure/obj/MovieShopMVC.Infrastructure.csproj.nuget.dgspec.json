@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/MovieShopMVC.Infrastructure.csproj": {}
+    "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Infrastructure/MovieShopMVC.Infrastructure.csproj": {}
   },
   "projects": {
-    "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj": {
+    "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj",
+        "projectUniqueName": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj",
         "projectName": "MovieShopMVC.Core",
-        "projectPath": "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj",
+        "projectPath": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj",
         "packagesPath": "/Users/het/.nuget/packages/",
-        "outputPath": "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/",
+        "outputPath": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/het/.nuget/NuGet/NuGet.Config"
@@ -98,14 +98,14 @@
         }
       }
     },
-    "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/MovieShopMVC.Infrastructure.csproj": {
+    "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Infrastructure/MovieShopMVC.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/MovieShopMVC.Infrastructure.csproj",
+        "projectUniqueName": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Infrastructure/MovieShopMVC.Infrastructure.csproj",
         "projectName": "MovieShopMVC.Infrastructure",
-        "projectPath": "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/MovieShopMVC.Infrastructure.csproj",
+        "projectPath": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Infrastructure/MovieShopMVC.Infrastructure.csproj",
         "packagesPath": "/Users/het/.nuget/packages/",
-        "outputPath": "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Infrastructure/obj/",
+        "outputPath": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/het/.nuget/NuGet/NuGet.Config"
@@ -120,8 +120,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj": {
-                "projectPath": "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj"
+              "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj": {
+                "projectPath": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj"
               }
             }
           }

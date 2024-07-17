@@ -5007,11 +5007,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj",
+      "projectUniqueName": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj",
       "projectName": "MovieShopMVC.Core",
-      "projectPath": "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj",
+      "projectPath": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Core/MovieShopMVC.Core.csproj",
       "packagesPath": "/Users/het/.nuget/packages/",
-      "outputPath": "/Users/het/RiderProjects/MovieShop/MovieShopMVC.Core/obj/",
+      "outputPath": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/het/.nuget/NuGet/NuGet.Config"

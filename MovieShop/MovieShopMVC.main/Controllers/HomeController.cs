@@ -34,10 +34,15 @@ public class HomeController : Controller
         
         if (ModelState.IsValid)
         {
-            Console.WriteLine(selectedGenre);
-            ViewBag.items = _moviesService.GetMoviesWithGenres(Convert.ToInt32(selectedGenre));
+            if (selectedGenre == "Genres")
+            {
+                ViewBag.items = _moviesService.GetAll();
+            }
+            else
+            {
+                ViewBag.items = _moviesService.GetMoviesWithGenres(Convert.ToInt32(selectedGenre));
+            }
         }
-        ViewBag.SelectedGenre = selectedGenre;
         CreateDropDownList(selectedGenre);
         return View();
     }
@@ -47,6 +52,21 @@ public class HomeController : Controller
     {
         var genres = _genresService.GetAll().Select(g => new { Key = g.Id, Value = g.Name }).ToList();
         ViewBag.GenreList = new SelectList(genres, "Key", "Value");
+        foreach (var genre in genres)
+        {
+            if (selectedGenre == "Genres")
+            {
+                break;
+            }
+            else
+            {
+                if (genre.Key == Convert.ToInt32(selectedGenre))
+                {
+                    selectedGenre = genre.Value;
+                    break;
+                }
+            }
+        }
         ViewBag.selectedGenre = selectedGenre;
     }
 

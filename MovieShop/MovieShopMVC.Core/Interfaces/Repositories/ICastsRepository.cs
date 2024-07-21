@@ -1,6 +1,8 @@
+using MovieShopMVC.Core.Entities;
+
 namespace MovieShopMVC.Core.Interfaces;
 
-public interface ICastsRepository<T> where T: class
+public interface ICastsRepository: IRepository<Casts>
 {
     
 }

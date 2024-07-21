@@ -4,7 +4,7 @@ using MovieShopMVC.Infrastructure.Data;
 
 namespace MovieShopMVC.Infrastructure.Repositories;
 
-public class PurchasesRepository: BaseRepository<Purchases>, IPurchasesRepository<Purchases>
+public class PurchasesRepository: BaseRepository<Purchases>, IPurchasesRepository
 {
     public PurchasesRepository(MovieShopDbContext movieShopDbContext) : base(movieShopDbContext)
     {

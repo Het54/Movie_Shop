@@ -6,16 +6,15 @@ namespace MovieShopMVC.main.Controllers;
 
 public class MoviesController : Controller
 {
-    private readonly MoviesService _service;
+    private readonly IMoviesService _moviesService;
 
-    public MoviesController(MoviesService service)
+    public MoviesController(IMoviesService moviesService)
     {
-        _service = service;
+        _moviesService = moviesService;
     }
     // GET
     public IActionResult Index()
     {
-        var items = _service.GetAll();
-        return View(items);
+        return View();
     }
 }

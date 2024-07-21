@@ -9,9 +9,9 @@ namespace MovieShopMVC.Infrastructure.Services;
 
 public class MoviesService: IMoviesService
 {
-    private readonly MoviesRepository _moviesRepository;
+    private readonly IMoviesRepository _moviesRepository;
 
-    public MoviesService(MoviesRepository moviesRepository)
+    public MoviesService(IMoviesRepository moviesRepository)
     {
         _moviesRepository = moviesRepository;
     }
@@ -46,6 +46,7 @@ public class MoviesService: IMoviesService
 
         return moviesResponseModel;
     }
+    
 
     public MoviesResponseModel GetById(int id)
     {
@@ -76,6 +77,68 @@ public class MoviesService: IMoviesService
         }
 
         return null;
+    }
+
+    public List<MoviesResponseModel> GetHighestGrossingMovies()
+    {
+        var movies = _moviesRepository.GetHighestGrossingMovies();
+        var moviesResponseModel = new List<MoviesResponseModel>();
+        foreach (var movie in movies)
+        {
+            moviesResponseModel.Add(new MoviesResponseModel()
+            {
+                BackdropUrl = movie.BackdropUrl,
+                Budget = movie.Budget,
+                CreatedBy = movie.CreatedBy,
+                CreatedDate = movie.CreatedDate,
+                ImdbUrl = movie.ImdbUrl,
+                OriginalLanguage = movie.OriginalLanguage,
+                Overview = movie.Overview,
+                PosterUrl = movie.PosterUrl,
+                Price = movie.Price,
+                ReleaseDate = movie.ReleaseDate,
+                Revenue = movie.Revenue,
+                Runtime = movie.Runtime,
+                Tagline = movie.Tagline,
+                Title = movie.Title,
+                TmdbUrl = movie.TmdbUrl,
+                UpdatedBy = movie.UpdatedBy,
+                UpdatedDate = movie.UpdatedDate
+            });
+        }
+
+        return moviesResponseModel;
+    }
+
+    public List<MoviesResponseModel> GetMoviesWithGenres(int id)
+    {
+        var moviesWithGenres = _moviesRepository.GetMoviesWithGenres(id);
+        var moviesResponseModel = new List<MoviesResponseModel>();
+        foreach (var movie in moviesWithGenres)
+        {
+            moviesResponseModel.Add(new MoviesResponseModel()
+            {
+                BackdropUrl = movie.BackdropUrl,
+                Budget = movie.Budget,
+                CreatedBy = movie.CreatedBy,
+                CreatedDate = movie.CreatedDate,
+                ImdbUrl = movie.ImdbUrl,
+                OriginalLanguage = movie.OriginalLanguage,
+                Overview = movie.Overview,
+                PosterUrl = movie.PosterUrl,
+                Price = movie.Price,
+                ReleaseDate = movie.ReleaseDate,
+                Revenue = movie.Revenue,
+                Runtime = movie.Runtime,
+                Tagline = movie.Tagline,
+                Title = movie.Title,
+                TmdbUrl = movie.TmdbUrl,
+                UpdatedBy = movie.UpdatedBy,
+                UpdatedDate = movie.UpdatedDate
+            });
+        }
+
+        return moviesResponseModel;
     }
 
     public int Add(MoviesRequestModel model)
@@ -133,4 +196,5 @@ public class MoviesService: IMoviesService
         };
         return _moviesRepository.Update(movieEntity);
     }
+    
 }

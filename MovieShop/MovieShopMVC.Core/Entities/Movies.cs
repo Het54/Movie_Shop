@@ -36,4 +36,6 @@ public class Movies
     public string? UpdatedBy { get; set; }
     [Column(TypeName = "datetime2")]
     public DateTime? UpdatedDate { get; set; }
+    
+    public MovieGenres MovieGenres { get; set; }
 }

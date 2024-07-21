@@ -1,0 +1,28 @@
+@{
+    Layout = "_Layout";
+    var movieModel = ViewBag.movie as MoviesResponseModel;
+}
+
+<div class="background-image" style="background-image: url('@movieModel.BackdropUrl')">
+    <div class="content">
+        <img style="margin-left: 200px" src="@movieModel.PosterUrl" alt="Movie Poster"/>
+    </div>
+    <div class="text">
+        <h1>@movieModel.Title</h1>
+        <p>@movieModel.Tagline</p>
+        <div class="content">
+            <p>@movieModel.Runtime m |</p>
+            <p>@movieModel.ReleaseDate</p>
+        </div>
+        <p>8.8</p>
+        <p>@movieModel.Overview</p>
+    </div>
+    <div class="vertical-buttons">
+        <button class="bg-transparent w-100 text-white font-semibold border border-gray-400 rounded shadow">
+            Review
+        </button>
+        <button class="bg-white text-black font-semibold px-5 mt-4 border border-gray-400 rounded shadow">
+            Buy
+        </button>
+    </div>
+</div>

@@ -1,6 +1,8 @@
+using MovieShopMVC.Core.Entities;
+
 namespace MovieShopMVC.Core.Interfaces;
 
-public interface IUsersRepository<T> where T: class
+public interface IUsersRepository: IRepository<Users>
 {
     
 }

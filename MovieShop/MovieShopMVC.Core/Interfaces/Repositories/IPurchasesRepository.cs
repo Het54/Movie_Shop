@@ -1,6 +1,8 @@
+using MovieShopMVC.Core.Entities;
+
 namespace MovieShopMVC.Core.Interfaces;
 
-public interface IPurchasesRepository<T> where T: class
+public interface IPurchasesRepository: IRepository<Purchases>
 {
     
 }

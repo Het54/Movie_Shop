@@ -12,8 +12,10 @@ builder.Services.AddDbContext<MovieShopDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MovieShopDb"));
 });
 
-builder.Services.AddScoped<MoviesService>();
-builder.Services.AddScoped<MoviesRepository>();
+builder.Services.AddScoped<IMoviesService, MoviesService>();
+builder.Services.AddScoped<IMoviesRepository, MoviesRepository>();
+builder.Services.AddScoped<IGenresService, GenresService>();
+builder.Services.AddScoped<IGenresRepository, GenresRepository>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

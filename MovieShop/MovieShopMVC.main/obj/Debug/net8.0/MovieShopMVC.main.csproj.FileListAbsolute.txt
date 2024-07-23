@@ -360,3 +360,4 @@
 /Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/obj/Debug/net8.0/MovieShopMVC.main.genruntimeconfig.cache
 /Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/obj/Debug/net8.0/ref/MovieShopMVC.main.dll
 /Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout2.cshtml.rz.scp.css
+/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/bin/Debug/net8.0/AutoMapper.dll

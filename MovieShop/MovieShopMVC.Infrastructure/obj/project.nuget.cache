@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LrU5MHEg9mA=",
+  "dgSpecHash": "2oA3vDaHynU=",
   "success": true,
   "projectFilePath": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.Infrastructure/MovieShopMVC.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/Users/het/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/Users/het/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/het/.nuget/packages/azure.identity/1.11.3/azure.identity.1.11.3.nupkg.sha512",
     "/Users/het/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

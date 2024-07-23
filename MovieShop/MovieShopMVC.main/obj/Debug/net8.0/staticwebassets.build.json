@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VicIpWaYgHrBRgQe3rpgxjjlTvLFpwofs88Vuz+t+7c=",
+  "Hash": "6dyp3SM1wNsVt3LOF+SRMkr0Pog4BzOc+FLzwgkAp3g=",
   "Source": "MovieShopMVC.main",
   "BasePath": "_content/MovieShopMVC.main",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tt0adopsmx",
-      "Integrity": "T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ=",
+      "Fingerprint": "agg35ukig9",
+      "Integrity": "CpNjRxQg5n0pc2wrSSyBEVvSfcmgQR8Bt6+ok2DBtT8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -1321,6 +1321,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.agg35ukig9.css",
+      "AssetFile": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3028"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CpNjRxQg5n0pc2wrSSyBEVvSfcmgQR8Bt6+ok2DBtT8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Jul 2024 06:19:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "agg35ukig9"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CpNjRxQg5n0pc2wrSSyBEVvSfcmgQR8Bt6+ok2DBtT8="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/wwwroot/css/site.css",
       "Selectors": [],
@@ -1331,7 +1376,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3029"
+          "Value": "3028"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1384,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ=\""
+          "Value": "\"CpNjRxQg5n0pc2wrSSyBEVvSfcmgQR8Bt6+ok2DBtT8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 23 Jul 2024 05:36:05 GMT"
+          "Value": "Tue, 23 Jul 2024 06:19:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,52 +1398,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.tt0adopsmx.css",
-      "AssetFile": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/wwwroot/css/site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3029"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 23 Jul 2024 05:36:05 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tt0adopsmx"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ="
+          "Value": "sha256-CpNjRxQg5n0pc2wrSSyBEVvSfcmgQR8Bt6+ok2DBtT8="
         }
       ]
     },

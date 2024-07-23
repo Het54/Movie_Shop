@@ -12,6 +12,8 @@ builder.Services.AddDbContext<MovieShopDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MovieShopDb"));
 });
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 builder.Services.AddScoped<IMoviesService, MoviesService>();
 builder.Services.AddScoped<IMoviesRepository, MoviesRepository>();
 builder.Services.AddScoped<IGenresService, GenresService>();

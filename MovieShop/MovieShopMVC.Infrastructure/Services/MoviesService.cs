@@ -1,3 +1,4 @@
+using AutoMapper;
 using MovieShopMVC.Core.Entities;
 using MovieShopMVC.Core.Interfaces;
 using MovieShopMVC.Core.Interfaces.Services;
@@ -10,10 +11,12 @@ namespace MovieShopMVC.Infrastructure.Services;
 public class MoviesService: IMoviesService
 {
     private readonly IMoviesRepository _moviesRepository;
+    private readonly IMapper _mapper;
 
-    public MoviesService(IMoviesRepository moviesRepository)
+    public MoviesService(IMoviesRepository moviesRepository, IMapper mapper)
     {
         _moviesRepository = moviesRepository;
+        _mapper = mapper;
     }
     
     public List<MoviesResponseModel> GetAll()
@@ -22,29 +25,8 @@ public class MoviesService: IMoviesService
         var moviesResponseModel = new List<MoviesResponseModel>();
         foreach (var movie in movies)
         {
-            moviesResponseModel.Add(new MoviesResponseModel()
-            {
-                Id = movie.Id,
-                BackdropUrl = movie.BackdropUrl,
-                Budget = movie.Budget,
-                CreatedBy = movie.CreatedBy,
-                CreatedDate = movie.CreatedDate,
-                ImdbUrl = movie.ImdbUrl,
-                OriginalLanguage = movie.OriginalLanguage,
-                Overview = movie.Overview,
-                PosterUrl = movie.PosterUrl,
-                Price = movie.Price,
-                ReleaseDate = movie.ReleaseDate,
-                Revenue = movie.Revenue,
-                Runtime = movie.Runtime,
-                Tagline = movie.Tagline,
-                Title = movie.Title,
-                TmdbUrl = movie.TmdbUrl,
-                UpdatedBy = movie.UpdatedBy,
-                UpdatedDate = movie.UpdatedDate
-            });
+            moviesResponseModel.Add(_mapper.Map<MoviesResponseModel>(movie));
         }
-
         return moviesResponseModel;
     }
     
@@ -54,27 +36,7 @@ public class MoviesService: IMoviesService
         var movie = _moviesRepository.GetById(id);
         if (movie != null)
         {
-            var movieResponseModel = new MoviesResponseModel()
-            {
-                Id = movie.Id,
-                BackdropUrl = movie.BackdropUrl,
-                Budget = movie.Budget,
-                CreatedBy = movie.CreatedBy,
-                CreatedDate = movie.CreatedDate,
-                ImdbUrl = movie.ImdbUrl,
-                OriginalLanguage = movie.OriginalLanguage,
-                Overview = movie.Overview,
-                PosterUrl = movie.PosterUrl,
-                Price = movie.Price,
-                ReleaseDate = movie.ReleaseDate,
-                Revenue = movie.Revenue,
-                Runtime = movie.Runtime,
-                Tagline = movie.Tagline,
-                Title = movie.Title,
-                TmdbUrl = movie.TmdbUrl,
-                UpdatedBy = movie.UpdatedBy,
-                UpdatedDate = movie.UpdatedDate
-            };
+            var movieResponseModel = _mapper.Map<MoviesResponseModel>(movie);
             return movieResponseModel;
         }
 
@@ -87,29 +49,8 @@ public class MoviesService: IMoviesService
         var moviesResponseModel = new List<MoviesResponseModel>();
         foreach (var movie in movies)
         {
-            moviesResponseModel.Add(new MoviesResponseModel()
-            {
-                Id = movie.Id,
-                BackdropUrl = movie.BackdropUrl,
-                Budget = movie.Budget,
-                CreatedBy = movie.CreatedBy,
-                CreatedDate = movie.CreatedDate,
-                ImdbUrl = movie.ImdbUrl,
-                OriginalLanguage = movie.OriginalLanguage,
-                Overview = movie.Overview,
-                PosterUrl = movie.PosterUrl,
-                Price = movie.Price,
-                ReleaseDate = movie.ReleaseDate,
-                Revenue = movie.Revenue,
-                Runtime = movie.Runtime,
-                Tagline = movie.Tagline,
-                Title = movie.Title,
-                TmdbUrl = movie.TmdbUrl,
-                UpdatedBy = movie.UpdatedBy,
-                UpdatedDate = movie.UpdatedDate
-            });
+            moviesResponseModel.Add(_mapper.Map<MoviesResponseModel>(movie));
         }
-
         return moviesResponseModel;
     }
 
@@ -119,27 +60,7 @@ public class MoviesService: IMoviesService
         var moviesResponseModel = new List<MoviesResponseModel>();
         foreach (var movie in moviesWithGenres)
         {
-            moviesResponseModel.Add(new MoviesResponseModel()
-            {
-                Id = movie.Id,
-                BackdropUrl = movie.BackdropUrl,
-                Budget = movie.Budget,
-                CreatedBy = movie.CreatedBy,
-                CreatedDate = movie.CreatedDate,
-                ImdbUrl = movie.ImdbUrl,
-                OriginalLanguage = movie.OriginalLanguage,
-                Overview = movie.Overview,
-                PosterUrl = movie.PosterUrl,
-                Price = movie.Price,
-                ReleaseDate = movie.ReleaseDate,
-                Revenue = movie.Revenue,
-                Runtime = movie.Runtime,
-                Tagline = movie.Tagline,
-                Title = movie.Title,
-                TmdbUrl = movie.TmdbUrl,
-                UpdatedBy = movie.UpdatedBy,
-                UpdatedDate = movie.UpdatedDate
-            });
+            moviesResponseModel.Add(_mapper.Map<MoviesResponseModel>(movie));
         }
 
         return moviesResponseModel;
@@ -147,26 +68,8 @@ public class MoviesService: IMoviesService
 
     public int Add(MoviesRequestModel model)
     {
-        var movieEntity = new Movies()
-        {
-            BackdropUrl = model.BackdropUrl,
-            Budget = model.Budget,
-            CreatedBy = model.CreatedBy,
-            CreatedDate = model.CreatedDate,
-            ImdbUrl = model.ImdbUrl,
-            OriginalLanguage = model.OriginalLanguage,
-            Overview = model.Overview,
-            PosterUrl = model.PosterUrl,
-            Price = model.Price,
-            ReleaseDate = model.ReleaseDate,
-            Revenue = model.Revenue,
-            Runtime = model.Runtime,
-            Tagline = model.Tagline,
-            Title = model.Title,
-            TmdbUrl = model.TmdbUrl,
-            UpdatedBy = model.UpdatedBy,
-            UpdatedDate = model.UpdatedDate
-        };
+        
+        var movieEntity = _mapper.Map<Movies>(model);
         return _moviesRepository.Insert(movieEntity);
     }
 

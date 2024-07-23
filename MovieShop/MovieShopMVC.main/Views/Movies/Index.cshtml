@@ -1,3 +1,73 @@
 @{
-    Layout = "_Layout";
+    Layout = "_Layout2";;
+    var movieModel = ViewBag.movie as MoviesResponseModel;
+    var trailers = ViewBag.tailers as List<Trailers>;
+    var moviecasts = ViewBag.movieCasts as List<MovieCasts>;
 }
+
+<div class="flex flex-col">
+    <div class="background-image" style="background-image: url('@movieModel.BackdropUrl')">
+        <div class="content">
+            <img style="margin-left: 200px" src="@movieModel.PosterUrl" alt="Movie Poster"/>
+        </div>
+        <div class="text">
+            <h1>@movieModel.Title</h1>
+            <p>@movieModel.Tagline</p>
+            <div class="content flex space-x-2">
+                <p>@movieModel.Runtime m |</p>
+                <p>@movieModel.ReleaseDate</p>
+            </div>
+            <p>8.8</p>
+            <p>@movieModel.Overview</p>
+        </div>
+        <div class="vertical-buttons flex flex-col space-y-2">
+            <button class="bg-transparent w-100 text-white font-semibold border border-gray-400 rounded shadow">
+                Review
+            </button>
+            <button class="bg-white text-black font-semibold px-5 mt-4 border border-gray-400 rounded shadow">
+                Buy
+            </button>
+        </div>
+    </div>
+    
+    <div class="flex-div">
+        <div class="item1">
+            <div style="padding-top: 10px">MOVIE FACTS</div>
+            <hr/>
+            <p style="font-size: 12px; margin-bottom: 4px; margin-left: 10px; padding-top: 10px">📆 Release Date: @movieModel.ReleaseDate</p>
+            <hr style="margin-bottom: 4px; margin-top: 4px"/>
+            <p style="font-size: 12px; margin-bottom: 4px; margin-left: 10px;">⌛ Run Time: @movieModel.Runtime</p>
+            <hr style="margin-bottom: 4px; margin-top: 4px"/>
+            <p style="font-size: 12px; margin-bottom: 4px; margin-left: 10px;">💵 Box Office: $@movieModel.Revenue</p>
+            <hr style="margin-bottom: 4px; margin-top: 4px"/>
+            <p style="font-size: 12px; margin-bottom: 4px; margin-left: 10px;">💲 Budget: $@movieModel.Budget</p>
+            <div style="padding-top: 15px">TRAILERS</div>
+            <hr/>
+            @foreach (var trailer in @trailers)
+            {
+            <a href="@trailer.TrailerUrl" class="block mb-2">
+                <p style="font-size: 12px; margin-bottom: 4px; margin-left: 10px;">
+                    ▶️ @trailer.Name
+                </p>
+            </a>
+            }
+            
+        </div>
+        <div class="item2">
+            <div style="padding-top: 10px">Casts</div>
+            @foreach (var moviecast in @moviecasts)
+            {
+                <a href="@Url.Action("Index","Cast", new {castid = @moviecast.Cast.Id, movieid = @movieModel.Id})" style="text-decoration: none">
+                    <hr/>
+                    <div class="flex-div">
+                        <div class="oval">
+                            <img src="@moviecast.Cast.ProfilePath" alt="Image">
+                        </div>
+                        <p style="font-size: 12px; text-align: right; color: black; margin-bottom: 4px; margin-left: 40px; padding-top: 10px">@moviecast.Cast.Name</p>
+                        <p style="font-size: 12px; color: black; margin-bottom: 4px; margin-left: 100px; padding-top: 10px">@moviecast.Character</p>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</div>

@@ -69,11 +69,5 @@ public class HomeController : Controller
         }
         ViewBag.selectedGenre = selectedGenre;
     }
-
-    public IActionResult MovieDetails()
-    {
-        ViewBag.movie = _moviesService.GetById(10);
-        return View();
-    }
     
 }

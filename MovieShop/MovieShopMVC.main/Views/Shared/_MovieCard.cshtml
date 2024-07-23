@@ -1,5 +1,7 @@
 @model MoviesResponseModel
 
 <div class="card">
-    <img src="@Model.PosterUrl" alt="Movie Poster">
+    <a href="@Url.Action("Index", "movies", new {id = @Model.Id})">
+        <img src="@Model.PosterUrl" alt="Movie Poster">
+    </a>
 </div>

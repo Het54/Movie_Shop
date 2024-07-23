@@ -22,4 +22,5 @@ public class MoviesRepository: BaseRepository<Movies>, IMoviesRepository
     {
         return _movieShopDbContext.Set<Movies>().Include(m => m.MovieGenres).ThenInclude(mg => mg.Genre).Where(m => m.MovieGenres.Genre.Id == @genreId);
     }
+    
 }

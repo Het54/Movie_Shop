@@ -2,6 +2,7 @@ namespace MovieShopMVC.Core.Models.ResponseModels;
 
 public class MoviesResponseModel
 {
+    public int Id { get; set; }
     public string? BackdropUrl { get; set; }
     public decimal? Budget { get; set; }
     public string? CreatedBy { get; set; }

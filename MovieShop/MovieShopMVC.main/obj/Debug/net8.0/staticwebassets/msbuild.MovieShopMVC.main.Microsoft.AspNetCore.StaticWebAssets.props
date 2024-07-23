@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8p0nduehnb</Fingerprint>
-      <Integrity>tBfb0uiK4E393l6YcDFKUNx5U0zSZHkv3Y3+rVgrwvE=</Integrity>
+      <Fingerprint>tt0adopsmx</Fingerprint>
+      <Integrity>T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -1080,23 +1080,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MovieShopMVC.main.ursey69ggs.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MovieShopMVC.main.ql4q1u196p.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>MovieShopMVC.main</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/MovieShopMVC.main</BasePath>
-      <RelativePath>MovieShopMVC.main.ursey69ggs.bundle.scp.css</RelativePath>
+      <RelativePath>MovieShopMVC.main.ql4q1u196p.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>ursey69ggs</Fingerprint>
-      <Integrity>KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8=</Integrity>
+      <Fingerprint>ql4q1u196p</Fingerprint>
+      <Integrity>Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MovieShopMVC.main.ursey69ggs.bundle.scp.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MovieShopMVC.main.ql4q1u196p.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

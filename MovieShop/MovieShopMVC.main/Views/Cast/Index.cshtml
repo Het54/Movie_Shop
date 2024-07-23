@@ -1,0 +1,42 @@
+@{
+    Layout = "_Layout2";
+    var castResponseModel = ViewBag.castDetails as CastsResponseModel;
+    var moviePosterUrl = ViewBag.moviePosterUrl as string;
+    var moviesListByCast = ViewBag.moviesByCast as List<MovieCasts>;
+}
+
+
+<div class="flex flex-col">
+    <div class="background-image" style="background-image: url('@moviePosterUrl')">
+        <div class="content">
+            <img style="margin-left: 200px" src="@castResponseModel.ProfilePath" alt="Movie Poster"/>
+        </div>
+        <div class="text" style="padding-left: 120px">
+            <h1>@castResponseModel.Name</h1>
+            <a href="@castResponseModel.TmdbUrl">
+                <p>Checkout the whole profile</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="flex-div1">
+       
+        <div class="item">
+            <div style="padding-top: 10px; text-align: center"></div>
+            <h3>Movies</h3>
+            @foreach (var moviecast in @moviesListByCast)
+            {
+            <a href="@Url.Action("Index","Movies", new {id = moviecast.Movie.Id})" style="text-decoration: none">
+                <hr/>
+                <div class="flex-div">
+                    <div class="oval">
+                        <img src="@moviecast.Movie.PosterUrl" alt="Image">
+                    </div>
+                    <p style="font-size: 12px; text-align: right; color: black; margin-bottom: 4px; margin-left: 40px; padding-top: 10px">@moviecast.Movie.Title</p>
+                    <p style="font-size: 12px; color: black; margin-bottom: 4px; margin-left: 100px; padding-top: 10px">@moviecast.Movie.Tagline</p>
+                </div>
+            </a>
+            }
+        </div>
+    </div>
+</div>

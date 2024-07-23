@@ -52,7 +52,7 @@ body {
 .background-image {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -104,6 +104,65 @@ body {
   height: 100%; /* Make the image cover the full height */
   width: auto;  /* Adjust width to maintain aspect ratio */
   object-fit: cover; /* Ensure the image maintains aspect ratio and covers the height */
+}
+
+
+.flex-div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  text-align: left;
+}
+
+.item1{
+  width: 40%;
+  padding: 5px;
+  text-align: left;
+  color: black;
+  background-color: #f0f0f0;
+}
+
+.item2{
+  width: 60%;
+  padding-top: 10px;
+  padding-left: 100px;
+  text-align: left;
+  color: black;
+}
+
+.oval {
+  width: 25px;          /* Width of the oval */
+  height: 40px;        /* Height of the oval */
+  border-radius: 50%;  /* Makes the element oval */
+  overflow: hidden;    /* Hides overflow to maintain oval shape */
+  background-color: #f0f0f0; /* Optional background color */
+}
+.oval img {
+  width: 100%;         /* Ensures the image fills the oval */
+  height: 100%;        /* Ensures the image fills the oval */
+  object-fit: cover;   /* Maintains image aspect ratio */
+}
+
+.flex-div1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.item{
+  width: 60%;
+  padding-top: 10px;
+  text-align: center;
+  color: black;
 }
 
 

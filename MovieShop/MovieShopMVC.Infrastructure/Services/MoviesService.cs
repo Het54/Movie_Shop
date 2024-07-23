@@ -24,6 +24,7 @@ public class MoviesService: IMoviesService
         {
             moviesResponseModel.Add(new MoviesResponseModel()
             {
+                Id = movie.Id,
                 BackdropUrl = movie.BackdropUrl,
                 Budget = movie.Budget,
                 CreatedBy = movie.CreatedBy,
@@ -55,6 +56,7 @@ public class MoviesService: IMoviesService
         {
             var movieResponseModel = new MoviesResponseModel()
             {
+                Id = movie.Id,
                 BackdropUrl = movie.BackdropUrl,
                 Budget = movie.Budget,
                 CreatedBy = movie.CreatedBy,
@@ -87,6 +89,7 @@ public class MoviesService: IMoviesService
         {
             moviesResponseModel.Add(new MoviesResponseModel()
             {
+                Id = movie.Id,
                 BackdropUrl = movie.BackdropUrl,
                 Budget = movie.Budget,
                 CreatedBy = movie.CreatedBy,
@@ -118,6 +121,7 @@ public class MoviesService: IMoviesService
         {
             moviesResponseModel.Add(new MoviesResponseModel()
             {
+                Id = movie.Id,
                 BackdropUrl = movie.BackdropUrl,
                 Budget = movie.Budget,
                 CreatedBy = movie.CreatedBy,

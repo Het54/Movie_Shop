@@ -28,6 +28,9 @@
       <Content Update="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
+      <Content Update="Views\Shared\_Layout2.cshtml.css">
+        <DependentUpon>_Layout3.cshtml</DependentUpon>
+      </Content>
     </ItemGroup>
 
 </Project>

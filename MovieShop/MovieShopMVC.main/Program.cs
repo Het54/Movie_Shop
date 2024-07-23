@@ -16,6 +16,13 @@ builder.Services.AddScoped<IMoviesService, MoviesService>();
 builder.Services.AddScoped<IMoviesRepository, MoviesRepository>();
 builder.Services.AddScoped<IGenresService, GenresService>();
 builder.Services.AddScoped<IGenresRepository, GenresRepository>();
+builder.Services.AddScoped<ITrailersRepository, TrailersRepository>();
+builder.Services.AddScoped<ITrailersService, TrailersService>();
+builder.Services.AddScoped<IMovieCastsRepository, MovieCastsRepository>();
+builder.Services.AddScoped<IMovieCastsService, MovieCastsService>();
+builder.Services.AddScoped<ICastsRepository, CastsRepository>();
+builder.Services.AddScoped<ICastsService, CastsService>();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

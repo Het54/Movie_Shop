@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0NH4lLmyDMNqJIWm3GQx/bhIqkDEpVzNrcMLR8tXjg4=",
+  "Hash": "VicIpWaYgHrBRgQe3rpgxjjlTvLFpwofs88Vuz+t+7c=",
   "Source": "MovieShopMVC.main",
   "BasePath": "_content/MovieShopMVC.main",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "ursey69ggs",
-      "Integrity": "KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8=",
+      "Fingerprint": "ql4q1u196p",
+      "Integrity": "Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/obj/Debug/net8.0/scopedcss/bundle/MovieShopMVC.main.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "ursey69ggs",
-      "Integrity": "KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8=",
+      "Fingerprint": "ql4q1u196p",
+      "Integrity": "Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/obj/Debug/net8.0/scopedcss/projectbundle/MovieShopMVC.main.bundle.scp.css"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8p0nduehnb",
-      "Integrity": "tBfb0uiK4E393l6YcDFKUNx5U0zSZHkv3Y3+rVgrwvE=",
+      "Fingerprint": "tt0adopsmx",
+      "Integrity": "T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -1321,51 +1321,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.8p0nduehnb.css",
-      "AssetFile": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/wwwroot/css/site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1909"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tBfb0uiK4E393l6YcDFKUNx5U0zSZHkv3Y3+rVgrwvE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 20 Jul 2024 12:34:08 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8p0nduehnb"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tBfb0uiK4E393l6YcDFKUNx5U0zSZHkv3Y3+rVgrwvE="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/wwwroot/css/site.css",
       "Selectors": [],
@@ -1376,7 +1331,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1909"
+          "Value": "3029"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +1339,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tBfb0uiK4E393l6YcDFKUNx5U0zSZHkv3Y3+rVgrwvE=\""
+          "Value": "\"T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 20 Jul 2024 12:34:08 GMT"
+          "Value": "Tue, 23 Jul 2024 05:36:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +1353,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tBfb0uiK4E393l6YcDFKUNx5U0zSZHkv3Y3+rVgrwvE="
+          "Value": "sha256-T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.tt0adopsmx.css",
+      "AssetFile": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3029"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Jul 2024 05:36:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tt0adopsmx"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T8B6ABP6TCnkM7tufAy0758WA9K4Rzq//ReDpLmkLeQ="
         }
       ]
     },
@@ -6251,7 +6251,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1086"
+          "Value": "2173"
         },
         {
           "Name": "Content-Type",
@@ -6259,11 +6259,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8=\""
+          "Value": "\"Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 19 Jul 2024 13:52:56 GMT"
+          "Value": "Tue, 23 Jul 2024 06:17:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6273,7 +6273,97 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8="
+          "Value": "sha256-Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8="
+        }
+      ]
+    },
+    {
+      "Route": "MovieShopMVC.main.ql4q1u196p.bundle.scp.css",
+      "AssetFile": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/obj/Debug/net8.0/scopedcss/projectbundle/MovieShopMVC.main.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2173"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Jul 2024 06:17:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ql4q1u196p"
+        },
+        {
+          "Name": "label",
+          "Value": "MovieShopMVC.main.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8="
+        }
+      ]
+    },
+    {
+      "Route": "MovieShopMVC.main.ql4q1u196p.styles.css",
+      "AssetFile": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/obj/Debug/net8.0/scopedcss/bundle/MovieShopMVC.main.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2173"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Jul 2024 06:17:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ql4q1u196p"
+        },
+        {
+          "Name": "label",
+          "Value": "MovieShopMVC.main.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8="
         }
       ]
     },
@@ -6288,7 +6378,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1086"
+          "Value": "2173"
         },
         {
           "Name": "Content-Type",
@@ -6296,11 +6386,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8=\""
+          "Value": "\"Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 19 Jul 2024 13:52:56 GMT"
+          "Value": "Tue, 23 Jul 2024 06:17:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6310,97 +6400,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8="
-        }
-      ]
-    },
-    {
-      "Route": "MovieShopMVC.main.ursey69ggs.bundle.scp.css",
-      "AssetFile": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/obj/Debug/net8.0/scopedcss/projectbundle/MovieShopMVC.main.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1086"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 19 Jul 2024 13:52:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ursey69ggs"
-        },
-        {
-          "Name": "label",
-          "Value": "MovieShopMVC.main.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8="
-        }
-      ]
-    },
-    {
-      "Route": "MovieShopMVC.main.ursey69ggs.styles.css",
-      "AssetFile": "/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/obj/Debug/net8.0/scopedcss/bundle/MovieShopMVC.main.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1086"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 19 Jul 2024 13:52:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ursey69ggs"
-        },
-        {
-          "Name": "label",
-          "Value": "MovieShopMVC.main.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-KlO9+Jv/aLkRoU7xBE3mx/8mlG2nafXzKneYFR/Vdf8="
+          "Value": "sha256-Mj3L3ZhFAyqDEFtTFHNIwVhTZs0Znvi/cEgjZV9FXK8="
         }
       ]
     }

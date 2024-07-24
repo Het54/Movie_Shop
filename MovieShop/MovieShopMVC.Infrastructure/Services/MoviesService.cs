@@ -29,7 +29,19 @@ public class MoviesService: IMoviesService
         }
         return moviesResponseModel;
     }
-    
+
+    public List<MoviesResponseModel> GetMoviesByPages(int pageNumber)
+    {
+        var movies = _moviesRepository.GetAll().OrderBy(m => m.Title).Skip((pageNumber - 1) * 18).Take(18).ToList();
+        var moviesResponseModel = new List<MoviesResponseModel>();
+        foreach (var movie in movies)
+        {
+            moviesResponseModel.Add(_mapper.Map<MoviesResponseModel>(movie));
+        }
+
+        return moviesResponseModel;
+    }
+
 
     public MoviesResponseModel GetById(int id)
     {
@@ -54,9 +66,21 @@ public class MoviesService: IMoviesService
         return moviesResponseModel;
     }
 
+    public List<MoviesResponseModel> GetMoviesWithGenresByPages(int id, int pageNumber)
+    {
+        var moviesWithGenres = _moviesRepository.GetMoviesWithGenres(id).OrderBy(m => m.Title).Skip((pageNumber - 1) * 18).Take(18).ToList();
+        var moviesResponseModel = new List<MoviesResponseModel>();
+        foreach (var movie in moviesWithGenres)
+        {
+            moviesResponseModel.Add(_mapper.Map<MoviesResponseModel>(movie));
+        }
+
+        return moviesResponseModel;
+    }
+    
     public List<MoviesResponseModel> GetMoviesWithGenres(int id)
     {
-        var moviesWithGenres = _moviesRepository.GetMoviesWithGenres(id);
+        var moviesWithGenres = _moviesRepository.GetMoviesWithGenres(id).ToList();
         var moviesResponseModel = new List<MoviesResponseModel>();
         foreach (var movie in moviesWithGenres)
         {

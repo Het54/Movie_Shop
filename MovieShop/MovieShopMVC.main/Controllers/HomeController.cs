@@ -21,15 +21,18 @@ public class HomeController : Controller
     }
     
     [HttpGet]
-    public IActionResult Index()
+    public IActionResult Index(int pageNumber = 1)
     {
         CreateDropDownList();
-        ViewBag.items = _moviesService.GetAll();
+        var len = _moviesService.GetAll().Count;
+        ViewBag.TotalPages = len / 12;
+        ViewBag.items = _moviesService.GetMoviesByPages(pageNumber);
+        ViewBag.CurrentPage = pageNumber;
         return View();
     }
     
     [HttpPost]
-    public IActionResult Index(string selectedGenre) 
+    public IActionResult Index(string selectedGenre, int pageNumber = 1) 
     {
         
         if (ModelState.IsValid)
@@ -40,7 +43,10 @@ public class HomeController : Controller
             }
             else
             {
-                ViewBag.items = _moviesService.GetMoviesWithGenres(Convert.ToInt32(selectedGenre));
+                var len = _moviesService.GetMoviesWithGenres(Convert.ToInt32(selectedGenre)).Count;
+                ViewBag.TotalPages = len / 12;
+                ViewBag.items = _moviesService.GetMoviesWithGenresByPages(Convert.ToInt32(selectedGenre), pageNumber);
+                ViewBag.CurrentPage = pageNumber;
             }
         }
         CreateDropDownList(selectedGenre);

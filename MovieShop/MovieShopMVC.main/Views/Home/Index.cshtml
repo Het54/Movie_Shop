@@ -1,6 +1,7 @@
 ﻿@{
     Layout = "_Layout";
     var movieModel = ViewBag.items as List<MoviesResponseModel>;
+    var selectedGenre = ViewBag.SelectedGenre as string;
 }
 
 <div class="card-container">
@@ -17,35 +18,80 @@
             <!-- First Page Link -->
             @if (ViewBag.CurrentPage > 1)
             {
-            <li class="page-item">
-                <a class="page-link" href="@Url.Action("Index", "Home", new { pageNumber = 1 })">First</a>
-            </li>
+                <li class="page-item">
+                    @if (selectedGenre == "Genres")
+                    {
+                        <a class="page-link" href="@Url.Action("Index", "Home", new { pageNumber = 1 })">First</a>
+                    }
+                    else
+                    {
+                        <a class="page-link" href="@Url.Action("Index", "Home", new { selectedGenre = selectedGenre,pageNumber = 1 })">First</a>
+                    }
+                </li>
             }
 
             <!-- Previous Page Link -->
             <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
-                <a class="page-link" href="@Url.Action("Index", "Home", new { pageNumber = ViewBag.CurrentPage - 1 })">Previous</a>
+                @if (selectedGenre == "Genres")
+                {
+                    <a class="page-link" href="@Url.Action("Index", "Home", new { pageNumber = ViewBag.CurrentPage - 1 })">Previous</a>
+                }
+                else
+                {
+                    <a class="page-link" href="@Url.Action("Index", "Home", new { selectedGenre = selectedGenre, pageNumber = ViewBag.CurrentPage - 1 })">Previous</a>
+                }
             </li>
+
+     
 
             <!-- Page Numbers -->
             @for (int i = Math.Max(1, ViewBag.CurrentPage - 2); i <= Math.Min(ViewBag.TotalPages, ViewBag.CurrentPage + 2); i++)
             {
-            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
-                <a class="page-link" href="@Url.Action("Index", "Home", new { pageNumber = i })">@i</a>
-            </li>
+                <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                    @if (selectedGenre == "Genres")
+                    {
+                        Console.WriteLine("Clicked not wanted");
+                        Console.WriteLine(selectedGenre);
+                        <a class="page-link" href="@Url.Action("Index", "Home", new { pageNumber = i })">@i</a>
+                    }
+                    else
+                    {
+                        Console.WriteLine("Clicked wanted");
+                        Console.WriteLine(selectedGenre);
+                        <a class="page-link" href="@Url.Action("Index", "Home", new { selectedGenre = selectedGenre, pageNumber = i })">@i</a>
+                    }
+                    
+                </li>
             }
 
             <!-- Next Page Link -->
             <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
-                <a class="page-link" href="@Url.Action("Index", "Home", new { pageNumber = ViewBag.CurrentPage + 1 })">Next</a>
+                @if (selectedGenre == "Genres")
+                {
+                    <a class="page-link" href="@Url.Action("Index", "Home", new { pageNumber = ViewBag.CurrentPage + 1 })">Next</a>
+                }
+                else
+                {
+                    <a class="page-link" href="@Url.Action("Index", "Home", new { selectedGenre = selectedGenre, pageNumber = ViewBag.CurrentPage + 1 })">Next</a>
+                }
             </li>
+
+
+            
 
             <!-- Last Page Link -->
             @if (ViewBag.CurrentPage < ViewBag.TotalPages)
             {
-            <li class="page-item">
-                <a class="page-link" href="@Url.Action("Index", "Home", new { pageNumber = ViewBag.TotalPages })">Last</a>
-            </li>
+                <li class="page-item">
+                    @if (selectedGenre == "Genres")
+                    {
+                        <a class="page-link" href="@Url.Action("Index", "Home", new { pageNumber = ViewBag.TotalPages })">Last</a>
+                    }
+                    else
+                    {
+                        <a class="page-link" href="@Url.Action("Index", "Home", new { selectedGenre = ViewBag.selectedGenre, pageNumber = ViewBag.TotalPages })">Last</a>
+                    }
+                </li>
             }
         </ul>
     </nav>

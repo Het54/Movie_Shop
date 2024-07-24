@@ -32,7 +32,7 @@ public class MoviesService: IMoviesService
 
     public List<MoviesResponseModel> GetMoviesByPages(int pageNumber)
     {
-        var movies = _moviesRepository.GetAll().OrderBy(m => m.Title).Skip((pageNumber - 1) * 18).Take(18).ToList();
+        var movies = _moviesRepository.GetAll().Skip((pageNumber - 1) * 18).Take(18).ToList();
         var moviesResponseModel = new List<MoviesResponseModel>();
         foreach (var movie in movies)
         {
@@ -68,7 +68,7 @@ public class MoviesService: IMoviesService
 
     public List<MoviesResponseModel> GetMoviesWithGenresByPages(int id, int pageNumber)
     {
-        var moviesWithGenres = _moviesRepository.GetMoviesWithGenres(id).OrderBy(m => m.Title).Skip((pageNumber - 1) * 18).Take(18).ToList();
+        var moviesWithGenres = _moviesRepository.GetMoviesWithGenres(id).Skip((pageNumber - 1) * 18).Take(18).ToList();
         var moviesResponseModel = new List<MoviesResponseModel>();
         foreach (var movie in moviesWithGenres)
         {

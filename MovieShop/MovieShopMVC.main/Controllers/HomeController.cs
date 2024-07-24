@@ -25,9 +25,10 @@ public class HomeController : Controller
     {
         CreateDropDownList();
         var len = _moviesService.GetAll().Count;
-        ViewBag.TotalPages = len / 12;
+        ViewBag.TotalPages = len / 18;
         ViewBag.items = _moviesService.GetMoviesByPages(pageNumber);
         ViewBag.CurrentPage = pageNumber;
+        
         return View();
     }
     
@@ -35,20 +36,19 @@ public class HomeController : Controller
     public IActionResult Index(string selectedGenre, int pageNumber = 1) 
     {
         
-        if (ModelState.IsValid)
+        if (selectedGenre == "Genres")
         {
-            if (selectedGenre == "Genres")
-            {
-                ViewBag.items = _moviesService.GetAll();
-            }
-            else
-            {
-                var len = _moviesService.GetMoviesWithGenres(Convert.ToInt32(selectedGenre)).Count;
-                ViewBag.TotalPages = len / 12;
-                ViewBag.items = _moviesService.GetMoviesWithGenresByPages(Convert.ToInt32(selectedGenre), pageNumber);
-                ViewBag.CurrentPage = pageNumber;
-            }
+            var len = _moviesService.GetAll().Count;
+            ViewBag.TotalPages = len / 18;
+            ViewBag.items = _moviesService.GetMoviesByPages(pageNumber);
+            ViewBag.CurrentPage = pageNumber;
         }
+        else
+        {
+            ViewBag.items = _moviesService.GetMoviesWithGenres(Convert.ToInt32(selectedGenre));
+
+        }
+
         CreateDropDownList(selectedGenre);
         return View();
     }

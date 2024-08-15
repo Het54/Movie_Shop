@@ -30,7 +30,7 @@ public class MoviesService: IMoviesService
         return moviesResponseModel;
     }
 
-    public List<MoviesResponseModel> GetMoviesByPages(int pageNumber)
+    public List<MoviesResponseModel> GetAllMoviesByPages(int pageNumber)
     {
         var movies = _moviesRepository.GetAll().Skip((pageNumber - 1) * 18).Take(18).ToList();
         var moviesResponseModel = new List<MoviesResponseModel>();

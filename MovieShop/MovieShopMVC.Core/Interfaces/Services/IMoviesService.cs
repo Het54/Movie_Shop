@@ -8,7 +8,7 @@ public interface IMoviesService
 {
     List<MoviesResponseModel> GetAll();
 
-    List<MoviesResponseModel> GetMoviesByPages(int pageNumber);
+    List<MoviesResponseModel> GetAllMoviesByPages(int pageNumber);
     MoviesResponseModel GetById(int id);
     List<MoviesResponseModel> GetHighestGrossingMovies();
     List<MoviesResponseModel> GetMoviesWithGenresByPages(int id, int pageNumber);

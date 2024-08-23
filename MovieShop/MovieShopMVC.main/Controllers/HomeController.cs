@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MovieShopMVC.Core.Entities;
@@ -7,11 +8,13 @@ using MovieShopMVC.main.Models;
 
 namespace MovieShopMVC.main.Controllers;
 
+[Authorize]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private readonly IMoviesService _moviesService;
     private readonly IGenresService _genresService;
+    private string routeGenre = "";
 
     public HomeController(ILogger<HomeController> logger, IMoviesService moviesService, IGenresService genresService)
     {
@@ -32,6 +35,7 @@ public class HomeController : Controller
         return View();
     }
     
+    [Route("/hello")]
     public IActionResult UpdatedIndex(string selectedGenre, int pageNumber = 1) 
     {
         
@@ -65,6 +69,7 @@ public class HomeController : Controller
             }
         }
         ViewBag.selectedGenre = selectedGenre;
+        routeGenre = selectedGenre;
     }
     
 }

@@ -1,0 +1,41 @@
+@model RegisterViewModel
+
+@{
+    Layout = "_Layout2";
+}
+
+
+<div class="container" style="margin-top: 10px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 400px;">
+    <h1>Register</h1>
+    <form asp-action="Index" asp-controller="User">
+        <div class="form-group">
+            <label for="first-name">First Name <span class="required">*</span></label>
+            <input type="text" id="first-name" name="FirstName" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name <span class="required">*</span></label>
+            <input type="text" id="last-name" name="LastName" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="DateOfBirth" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="Email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="PhoneNumber" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="password">Password <span class="required">*</span></label>
+            <input type="password" id="password" name="Password" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password <span class="required">*</span></label>
+            <input type="password" id="confirm-password" name="ConfirmPassword" class="form-control" required>
+        </div>
+        <input type="submit" value="Register">
+    </form>
+</div>

@@ -8,4 +8,5 @@ public class UsersResponseModel
     public string LastName { get; set; }
     public string? PhoneNumber { get; set; }
     public string? ProfilePictureUrl { get; set; }
+    public string HashedPassword { get; set; }
 }

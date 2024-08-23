@@ -19,4 +19,9 @@ public class UsersRequestModel
     [MaxLength(16)]
     public string? PhoneNumber { get; set; }
     public string? ProfilePictureUrl { get; set; }
+    [Required]
+    public string HashedPassword { get; set; }
+    [Required]
+    public string Salt { get; set; }
+    public bool? IsLocked { get; set; }
 }

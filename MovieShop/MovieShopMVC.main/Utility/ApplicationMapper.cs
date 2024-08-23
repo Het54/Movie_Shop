@@ -9,8 +9,10 @@ public class ApplicationMapper: Profile
 {
     public ApplicationMapper()
     {
-        CreateMap<Movies, MoviesRequestModel>();
-        CreateMap<MoviesRequestModel, Movies>();
-        CreateMap<Movies, MoviesResponseModel>();
+        CreateMap<Movies, MoviesRequestModel>().ReverseMap();
+        CreateMap<Movies, MoviesResponseModel>().ReverseMap();
+        CreateMap<Users, UsersRequestModel>().ReverseMap();
+        CreateMap<Users, UsersResponseModel>().ReverseMap();
+        CreateMap<UserRoles, UserRolesResponseModel>().ReverseMap();
     }
 }

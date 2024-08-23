@@ -1,9 +1,13 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using MovieShopMVC.Core.Interfaces;
 using MovieShopMVC.Core.Interfaces.Services;
 using MovieShopMVC.Infrastructure.Data;
 using MovieShopMVC.Infrastructure.Repositories;
 using MovieShopMVC.Infrastructure.Services;
+using MovieShopMVC.main.JWTAuthenticationManager;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +28,13 @@ builder.Services.AddScoped<IMovieCastsRepository, MovieCastsRepository>();
 builder.Services.AddScoped<IMovieCastsService, MovieCastsService>();
 builder.Services.AddScoped<ICastsRepository, CastsRepository>();
 builder.Services.AddScoped<ICastsService, CastsService>();
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+builder.Services.AddScoped<IUsersService, UsersService>();
+builder.Services.AddScoped<IUserRolesRepository, UserRolesRepository>();
+builder.Services.AddScoped<IUserRolesService, UserRolesService>();
+builder.Services.AddScoped<JWTTokenHandler>();
+builder.Services.AddCustomJWTAuthentication();
+
 
 
 // Add services to the container.
@@ -44,10 +55,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();

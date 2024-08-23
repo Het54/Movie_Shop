@@ -32,7 +32,7 @@ public class MoviesService: IMoviesService
 
     public List<MoviesResponseModel> GetAllMoviesByPages(int pageNumber)
     {
-        var movies = _moviesRepository.GetAll().Skip((pageNumber - 1) * 18).Take(18).ToList();
+        var movies = _moviesRepository.GetAll().OrderByDescending(movies => movies.ReleaseDate).Skip((pageNumber - 1) * 18).Take(18).ToList();
         var moviesResponseModel = new List<MoviesResponseModel>();
         foreach (var movie in movies)
         {
@@ -68,7 +68,7 @@ public class MoviesService: IMoviesService
 
     public List<MoviesResponseModel> GetMoviesWithGenresByPages(int id, int pageNumber)
     {
-        var moviesWithGenres = _moviesRepository.GetMoviesWithGenres(id).Skip((pageNumber - 1) * 18).Take(18).ToList();
+        var moviesWithGenres = _moviesRepository.GetMoviesWithGenres(id).OrderByDescending(movies => movies.ReleaseDate).Skip((pageNumber - 1) * 18).Take(18).ToList();
         var moviesResponseModel = new List<MoviesResponseModel>();
         foreach (var movie in moviesWithGenres)
         {
@@ -92,13 +92,21 @@ public class MoviesService: IMoviesService
 
     public int Add(MoviesRequestModel model)
     {
-        
+        if (model == null)
+        {
+            throw new ArgumentException("Cannot Insert Empty Movie Model");
+        }
         var movieEntity = _mapper.Map<Movies>(model);
         return _moviesRepository.Insert(movieEntity);
     }
 
     public int DeleteById(int id)
     {
+        var movie = _moviesRepository.GetById(id);
+        if (movie == null)
+        {
+            throw new Exception($"Movie with Id {id} not found!!");
+        }
         return _moviesRepository.DeleteById(id);
     }
 

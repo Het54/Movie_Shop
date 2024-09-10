@@ -75,10 +75,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-fm0kbsis22
+[/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/Views/Shared/_HomeHeaderLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Ib21lSGVhZGVyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-hd0adyyg6s
 
 [/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/Views/Shared/_Layout2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-5f2slz0x1p
+
+[/Users/het/Desktop/Movie_Shop/MovieShop/MovieShopMVC.main/Views/Shared/_LoginHeaderLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpbkhlYWRlckxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-oxzvrr13qq

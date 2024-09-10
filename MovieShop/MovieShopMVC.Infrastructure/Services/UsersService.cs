@@ -11,11 +11,13 @@ public class UsersService: IUsersService
 {
     private readonly IUsersRepository _usersRepository;
     private readonly IMapper _mapper;
+    private readonly IUserRolesService _userRolesService;
 
-    public UsersService(IUsersRepository usersRepository, IMapper mapper)
+    public UsersService(IUsersRepository usersRepository, IMapper mapper, IUserRolesService userRolesService)
     {
         _usersRepository = usersRepository;
         _mapper = mapper;
+        _userRolesService = userRolesService;
     }
 
     public List<UsersResponseModel> GetAll()
@@ -51,7 +53,13 @@ public class UsersService: IUsersService
 
     public int Add(UsersRequestModel model)
     {
-        return _usersRepository.Insert(_mapper.Map<Users>(model));
+        var id = _usersRepository.InsertUser(_mapper.Map<Users>(model));
+        UserRolesRequestModel userRolesRequestModel = new UserRolesRequestModel()
+        {
+            RoleId = 2,
+            UserId = id
+        };
+        return _userRolesService.Add(userRolesRequestModel);
     }
 
     public int DeleteById(int id)

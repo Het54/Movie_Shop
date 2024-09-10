@@ -1,7 +1,5 @@
-﻿@model Genres
-
-@{
-    var selectedGenre = ViewBag.SelectedGenre as string;
+﻿@{
+    
 }
 
 <!DOCTYPE html>
@@ -18,13 +16,8 @@
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-0" style="background-color: #4f5050 !important; ">
         <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: white">Movie Shop</a>
+            <a class="navbar-brand" asp-area="" style="color: white">Movie Shop</a>
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <form asp-controller="Home" asp-action="UpdatedIndex" method="post" id="genreForm">
-                    <select name="selectedGenre" onchange="submitForm()" asp-items="ViewBag.GenreList" style="background: none ;-moz-appearance: none; margin-left: 10px; cursor: pointer; color: white; border-color: #4f5050">
-                        <option>@selectedGenre</option>
-                    </select>
-                </form>
                 <div class="d-flex ms-auto">
                     <a class="btn btn-outline-light me-3"   asp-area="" asp-controller="Login" asp-action="Index">Login</a>
                     <a class="btn btn-outline-light"  asp-area="" asp-controller="User" asp-action="Index">Register</a>
@@ -47,10 +40,6 @@
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
 <script>
-    function submitForm()
-    {
-    document.getElementById("genreForm").submit();
-    }
 </script>
 @await RenderSectionAsync("Scripts", required: false)
 

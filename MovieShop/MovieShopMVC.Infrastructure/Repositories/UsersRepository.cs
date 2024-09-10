@@ -6,7 +6,17 @@ namespace MovieShopMVC.Infrastructure.Repositories;
 
 public class UsersRepository: BaseRepository<Users>, IUsersRepository
 {
+    private readonly MovieShopDbContext _movieShopDbContext;
+
     public UsersRepository(MovieShopDbContext movieShopDbContext) : base(movieShopDbContext)
     {
+        _movieShopDbContext = movieShopDbContext;
+    }
+
+    public int InsertUser(Users entity)
+    {
+        _movieShopDbContext.Set<Users>().Add(entity);
+        _movieShopDbContext.SaveChanges();
+        return (entity as dynamic).Id;
     }
 }

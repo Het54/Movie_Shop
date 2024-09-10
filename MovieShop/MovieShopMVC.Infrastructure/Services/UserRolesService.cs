@@ -1,6 +1,8 @@
 using AutoMapper;
+using MovieShopMVC.Core.Entities;
 using MovieShopMVC.Core.Interfaces;
 using MovieShopMVC.Core.Interfaces.Services;
+using MovieShopMVC.Core.Models.RequestModels;
 using MovieShopMVC.Core.Models.ResponseModels;
 
 namespace MovieShopMVC.Infrastructure.Services;
@@ -27,5 +29,10 @@ public class UserRolesService: IUserRolesService
         }
 
         return userRolesResponseModel;
+    }
+
+    public int Add(UserRolesRequestModel model)
+    {
+        return _userRolesRepository.Insert(_mapper.Map<UserRoles>(model));
     }
 }

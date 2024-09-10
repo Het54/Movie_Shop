@@ -19,6 +19,15 @@ public class LoginController : Controller
 
     public IActionResult Index()
     {
+        Response.Cookies.Append("AuthToken", "", new CookieOptions
+        {
+            Expires = DateTimeOffset.UtcNow.AddDays(-1), // Set expiration to the past
+            HttpOnly = true, // Optional: Match attributes of the original cookie
+            Secure = true, // Optional: Match attributes of the original cookie
+            SameSite = SameSiteMode.Lax // Optional: Match attributes of the original cookie
+        });
+        
+        
         return View();
     }
 
@@ -32,7 +41,7 @@ public class LoginController : Controller
             HashedPassword = model.Password
         });
 
-        if (token == null)
+        if (string.IsNullOrEmpty(token.JwtToken))
         {
             return View(model);
         }

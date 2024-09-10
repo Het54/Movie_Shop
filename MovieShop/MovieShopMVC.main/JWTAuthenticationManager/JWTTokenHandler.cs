@@ -23,26 +23,24 @@ public class JWTTokenHandler
     {
         if (string.IsNullOrEmpty(model.Email) || string.IsNullOrEmpty(model.HashedPassword))
         {
-            return null;
+            return new AuthenticationResponseModel();
         }
         
         var users = _userRolesService.GetAll()
             .Where(x => x.User.Email == model.Email && x.User.HashedPassword == model.HashedPassword).ToList();
-        
-        if (users.IsNullOrEmpty())
-        {
-            return null;
-        }
 
-        Console.WriteLine(users[0].User.Email);
-        Console.WriteLine(users[0].Role.Name);
+        if (users.Count == 0)
+        {
+            return new AuthenticationResponseModel();
+        }
     
         var tokenExpiryTimeStamp = DateTime.Now.AddMinutes(JWT_TOKEN_VALIDITY_MINS);
         var tokenKey = Encoding.ASCII.GetBytes(JWT_SECURITY_KEY);
         var claimsIdentity = new ClaimsIdentity(new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Email, users[0].User.Email),
-            new Claim(ClaimTypes.Role, users[0].Role.Name)
+            new Claim(ClaimTypes.Role, users[0].Role.Name),
+            new Claim(ClaimTypes.Name,users[0].User.FirstName+' '+users[0].User.LastName)
         });
         
         var signingCredential =

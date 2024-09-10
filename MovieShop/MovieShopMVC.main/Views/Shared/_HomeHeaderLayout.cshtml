@@ -1,0 +1,93 @@
+﻿@model Genres
+
+@{
+    var selectedGenre = ViewBag.SelectedGenre as string;
+    var userRole = ViewBag.userRole as string;
+    var userName = ViewBag.userName as string;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - MovieShopMVC.main</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/MovieShopMVC.main.styles.css" asp-append-version="true"/>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-0" style="background-color: #4f5050 !important; ">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: white">Movie Shop</a>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <form asp-controller="Home" asp-action="UpdatedIndex" method="post" id="genreForm">
+                    <select name="selectedGenre" onchange="submitForm()" asp-items="ViewBag.GenreList" style="background: none ;-moz-appearance: none; margin-left: 10px; cursor: pointer; color: white; border-color: #4f5050">
+                        <option>@selectedGenre</option>
+                    </select>
+                </form>
+                
+                @if (userRole == "Admin")
+                {
+                    <div class="d-flex ms-auto">
+                        <select name="adminoption"  style="background: none ;-moz-appearance: none; margin-right: 20px; cursor: pointer; color: white; border-color: #4f5050">
+                            <option>Admin</option>
+                            <option>Top Movies</option>
+                            <option>Create Movie</option>
+                        </select>
+                        <select name="useroption" id="useroption" style="background: none; -moz-appearance: none; margin-right: 10px; cursor: pointer; color: white; border-color: #4f5050" onchange="handleUserOption(this)">
+                            <option>@userName</option>
+                            <option>Movies</option>
+                            <option>Favorites</option>
+                            <option>Account</option>
+                            <option value="logout">Logout</option>
+                        </select>
+                    </div>
+                }
+                else
+                {
+                    <div class="d-flex ms-auto">
+                        <select name="useroption" id="useroption" style="background: none; -moz-appearance: none; margin-right: 10px; cursor: pointer; color: white; border-color: #4f5050" onchange="handleUserOption(this)">
+                            <option>@userName</option>
+                            <option>Movies</option>
+                            <option>Favorites</option>
+                            <option>Account</option>
+                            <option value="logout">Logout</option>
+                        </select>
+                    </div>
+                }
+            </div>
+        </div>
+    </nav>
+</header>
+<div style="margin-left: 10px; margin-right: 10px">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - All rights reserved to Movie Shop
+    </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script>
+    function submitForm()
+    {
+    document.getElementById("genreForm").submit();
+    }
+    
+    function handleUserOption(selectElement) {
+        var selectedValue = selectElement.value;
+        if (selectedValue === "logout") {
+            window.location.href = '@Url.Action("Index", "Login")';
+        }
+    }
+</script>
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

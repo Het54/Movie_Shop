@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -8,7 +10,7 @@ using MovieShopMVC.main.Models;
 
 namespace MovieShopMVC.main.Controllers;
 
-[Authorize]
+[Authorize(Roles = "User,Admin")]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -26,11 +28,19 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Index(int pageNumber = 1)
     {
-        CreateDropDownList();
+        var claimsPrincipal = ExtractClaimsFromToken(Request.Cookies["AuthToken"]);
+        var userEmail = claimsPrincipal.FindFirst(JwtRegisteredClaimNames.Email)?.Value;
+        var userRole = claimsPrincipal.FindFirst("role")?.Value;
+        var userName = claimsPrincipal.FindFirst("unique_name")?.Value;
+        
         var len = _moviesService.GetAll().Count;
         ViewBag.TotalPages = len / 18;
         ViewBag.items = _moviesService.GetAllMoviesByPages(pageNumber);
         ViewBag.CurrentPage = pageNumber;
+        ViewBag.userEmail = userEmail!;
+        ViewBag.userRole = userRole!;
+        ViewBag.userName = userName!;
+        CreateDropDownList();
         
         return View();
     }
@@ -39,11 +49,19 @@ public class HomeController : Controller
     public IActionResult UpdatedIndex(string selectedGenre, int pageNumber = 1) 
     {
         
+        var claimsPrincipal = ExtractClaimsFromToken(Request.Cookies["AuthToken"]);
+        var userEmail = claimsPrincipal.FindFirst(JwtRegisteredClaimNames.Email)?.Value;
+        var userRole = claimsPrincipal.FindFirst("role")?.Value;
+        var userName = claimsPrincipal.FindFirst("unique_name")?.Value;
+        
         var len = _moviesService.GetMoviesWithGenres(Convert.ToInt32(selectedGenre)).Count;
         ViewBag.TotalPages = len / 18;
         ViewBag.items = _moviesService.GetMoviesWithGenresByPages(Convert.ToInt32(selectedGenre),pageNumber);
         ViewBag.CurrentPage = pageNumber;
         ViewBag.SelectedGenreId = Convert.ToInt32(selectedGenre);
+        ViewBag.userEmail = userEmail!;
+        ViewBag.userRole = userRole!;
+        ViewBag.userName = userName!;
         CreateDropDownList(selectedGenre);
         return View();
     }
@@ -70,6 +88,27 @@ public class HomeController : Controller
         }
         ViewBag.selectedGenre = selectedGenre;
         routeGenre = selectedGenre;
+    }
+    
+    [NonAction]
+    public ClaimsPrincipal ExtractClaimsFromToken(string jwtToken)
+    {
+        var handler = new JwtSecurityTokenHandler();
+    
+        // Validate if the token is well-formed
+        if (!handler.CanReadToken(jwtToken))
+        {
+            throw new ArgumentException("Invalid JWT token");
+        }
+    
+        var token = handler.ReadJwtToken(jwtToken);
+    
+        // Create a claims identity
+        var claims = token.Claims;
+        var identity = new ClaimsIdentity(claims);
+    
+        // Return the ClaimsPrincipal which can be used for authorization checks
+        return new ClaimsPrincipal(identity);
     }
     
 }

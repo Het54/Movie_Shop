@@ -22,7 +22,6 @@ public class UserController : Controller
     [HttpPost]
     public IActionResult Index(RegisterViewModel model)
     {
-        Console.WriteLine("Inside HTTPPOST Index");
         if (ModelState.IsValid)
         {
             UsersRequestModel usersRequestModel = new UsersRequestModel

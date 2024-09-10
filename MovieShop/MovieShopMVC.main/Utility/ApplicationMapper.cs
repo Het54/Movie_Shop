@@ -14,5 +14,6 @@ public class ApplicationMapper: Profile
         CreateMap<Users, UsersRequestModel>().ReverseMap();
         CreateMap<Users, UsersResponseModel>().ReverseMap();
         CreateMap<UserRoles, UserRolesResponseModel>().ReverseMap();
+        CreateMap<UserRoles, UserRolesRequestModel>().ReverseMap();
     }
 }
